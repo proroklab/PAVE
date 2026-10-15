@@ -1,0 +1,42 @@
+# Leader env config for the warehouse scenario.
+# Mirrors the design from the planning session — see scenarios/warehouse/.
+dt: 0.1
+max_steps: 200
+max_speed: 2.5
+max_yaw_rate: 3.141592653589793  # π rad/s
+
+world_min: -5.0
+world_max: 5.0
+
+agent_side: 0.6
+object_radius: 0.2
+
+# Wall with three gaps. agent_side > gap_width keeps the inscribed-circle
+# agent from squeezing through any gap, while object_radius * 2 < gap_width
+# keeps the object passable.
+wall_y: 0.0
+gap_xs: [-3.3333333333333335, 0.0, 3.3333333333333335]
+gap_width: 0.55
+
+# Three vertical shelves in the upper half (used only for goal sampling /
+# follower env — leader never sees them, but we keep the same env config so
+# both halves of the scenario share one geometry source of truth).
+shelf_xs: [-2.0, 0.0, 2.0]
+shelf_width: 0.8
+shelf_y_min: 0.8
+shelf_y_max: 4.5
+
+# Pickup/drop geometry.
+pickup_cone_half_angle: 1.0471975511965976  # π/3 = 60°
+pickup_max_distance: 0.9
+drop_distance: 0.55
+interact_threshold: 0.5
+
+# Reward shaping. Carrying gets a higher per-step penalty so the agent
+# is incentivised to drop the object quickly.
+step_penalty: 0.01
+step_penalty_carrying: 0.05
+pickup_reward: 1.0
+goal_reward: 25.0
+bad_drop_penalty: 5.0
+progress_weight: 1.0

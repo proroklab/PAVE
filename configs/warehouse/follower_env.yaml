@@ -1,0 +1,40 @@
+# Follower env config for the warehouse scenario.
+dt: 0.1
+max_steps: 300
+max_speed: 2.5
+max_yaw_rate: 3.141592653589793
+
+world_min: -5.0
+world_max: 5.0
+
+agent_side: 0.6
+object_radius: 0.2
+
+wall_y: 0.0
+gap_xs: [-3.3333333333333335, 0.0, 3.3333333333333335]
+gap_width: 0.55
+
+shelf_xs: [-2.0, 0.0, 2.0]
+shelf_width: 0.8
+shelf_y_min: 0.8
+shelf_y_max: 4.5
+
+pickup_cone_half_angle: 1.0471975511965976
+pickup_max_distance: 0.9
+drop_distance: 0.55
+interact_threshold: 0.5
+
+step_penalty: 0.01
+step_penalty_carrying: 0.1
+pickup_reward: 4.0
+goal_reward: 25.0
+bad_drop_penalty: 5.0
+progress_weight: 1.0
+
+# Follower-only:
+goal_tolerance: 0.3
+collision_penalty: 0.1
+
+# Testing only — when true, the follower spawns next to the goal facing it
+# (transport-to-goal leg becomes trivial). Leave false for normal training.
+spawn_near_goal: false

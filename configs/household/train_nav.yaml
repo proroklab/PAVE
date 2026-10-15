@@ -1,0 +1,21 @@
+# Navigator training overrides (on top of common/training.yaml).
+# Real-metric geometry: follower must rotate to ~±π/2 to fit its
+# 0.33 m long side through the 0.36 m gap, so it needs significantly
+# more steps than the original normalized sim to discover this.
+total_timesteps: 1500000
+n_envs: 8
+
+# Linear collision-penalty schedule (mirrors warehouse's carry-penalty
+# schedule). Penalty stays at ``initial`` for ``warmup_steps``, then
+# linearly ramps to ``final`` over ``anneal_steps``; plateau after.
+# Total budget: 1.5M = 300k warmup + 900k anneal + 300k plateau.
+collision_penalty_initial: 0.0
+collision_penalty_final: 10.0
+collision_penalty_warmup_steps: 300000
+collision_penalty_anneal_steps: 900000
+
+vae:
+  latent_dim: 4
+  batch_size: 64
+  epochs: 100
+  learning_rate: 0.001

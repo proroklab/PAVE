@@ -1,0 +1,17 @@
+# Follower training overrides (on top of common/training.yaml).
+total_timesteps: 2000000
+n_envs: 8
+
+# Env overrides applied at training time. The follower env's *defaults*
+# (in configs/mobile_arm/follower_env.yaml) describe the deployment env;
+# these knobs reshape the spawn distribution that V_F learns from. Both
+# `train follower` and `train ood` apply this block via the same
+# resolved-training-config path so the VAE samples from V_F's training
+# distribution exactly.
+env_overrides:
+  # Spawn-cone restriction (radians). φ=0 points along base +x toward
+  # the tray; the cone selects which directions in front of the base
+  # get object spawns. Set to match θ_1's joint-limit reach so the
+  # follower trains only on objects the arm can swing to.
+  object_theta_low: -1.0
+  object_theta_high: 1.0

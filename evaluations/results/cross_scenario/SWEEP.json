@@ -1,0 +1,11 @@
+{
+  "name": "paper",
+  "description": "Cross-scenario sweep behind every table and figure in evaluations/reports/. Checkpoints: evaluations/pool/cross_scenario/; intermediates: this directory.",
+  "original_run_id": "2026-05-19_154234_master42",
+  "master_seed": 42,
+  "produced_by": "evaluations/paper/cross_scenario/run.py --seed 42 (per-cell sub-seeds via SeedManager)",
+  "planner": "CEM as configured in configs/<scenario>/planner.yaml; no prior-margin guard in any scenario.",
+  "selection": "selection.json, written by python -m evaluations.paper.cross_scenario.selection from evaluations/pool/cross_scenario/candidates/ (all trained policies -> competent -> selected); verify with --check.",
+  "provenance_note": "Some checkpoints were assembled from other runs (selection.json records which pool checkpoint each cell uses); run.py --seed 42 regenerates a sweep from the same distribution, not these exact checkpoints. See evaluations/paper/cross_scenario/run.py.",
+  "history": "Investigation-era results and the May 2026 evals of unselected cells live in archive/cross_scenario/ (local, not published); moves recorded in its MOVES*.json."
+}

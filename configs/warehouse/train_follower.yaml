@@ -1,0 +1,10 @@
+total_timesteps: 1500000
+n_envs: 8
+step_penalty_carrying_warmup_steps: 500000
+step_penalty_carrying_anneal_steps: 1000000
+# Competence gate: after training, eval the final policy standalone (no
+# leader / V_F) and flag (marker file + nonzero exit) if the on_goal rate is
+# below this. Used to select competent base follower policies; the criterion
+# is method-independent (measured in the follower's own env).
+convergence_min_on_goal: 0.7
+convergence_eval_episodes: 100

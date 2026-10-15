@@ -1,0 +1,12 @@
+# Mobile_arm CEM planner overrides.
+distribution: gaussian
+horizon: 30
+num_samples: 200
+num_iters: 4
+noise_sigma: 0.5
+elite_frac: 0.2
+min_std: 0.1
+replan_interval: 5
+# See warehouse/planner.yaml — full-episode scale via prior extension.
+terminal_value: value
+prior_extension_threads: 1

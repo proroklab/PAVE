@@ -1,0 +1,10 @@
+# Common CEM planner defaults.
+# Scenario-specific planner.yaml files override these values.
+distribution: gaussian  # the only supported distribution
+horizon: 15
+num_samples: 64
+num_iters: 3
+noise_sigma: 0.5
+elite_frac: 0.2
+min_std: 0.05
+replan_interval: 1

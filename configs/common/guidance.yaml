@@ -1,0 +1,14 @@
+# Common guidance defaults.
+# Scenario-specific guidance.yaml files override these values.
+distillation:
+  epochs: 50
+  batch_size: 64
+  lr: 0.001
+  obstacle_samples: 500
+  agent_grid_size: 20
+
+ood:
+  enabled: true
+  latent_dim: 2
+  grid_size: 50
+  vae_path: null

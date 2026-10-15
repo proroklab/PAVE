@@ -1,0 +1,16 @@
+# Warehouse CEM planner overrides (on top of common/planner.yaml).
+# Tighter than obstacle_arena's tuned values; will need its own optuna sweep.
+distribution: gaussian
+horizon: 40
+num_samples: 500
+num_iters: 10
+noise_sigma: 1.5
+elite_frac: 0.2
+min_std: 0.1
+replan_interval: 5
+# Bridge horizon-H rollout to full-episode scale via prior policy
+# extension (the mathematically correct option — see JointUtilityCost
+# docstring). Bump prior_extension_threads when spare CPU is available
+# per worker (keep ``num_workers * threads <= cpu_count``).
+terminal_value: value
+prior_extension_threads: 1

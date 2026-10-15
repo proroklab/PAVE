@@ -1,0 +1,53 @@
+# ROS2 deployment config for household policies on Robomasters.
+#
+# Override `model_path`, `role`, and TF frame names per launch:
+#   critic-sharing deploy household \
+#       --config /path/to/override.yaml \
+#       --role follower \
+#       --model-path artifacts/nav/<run>/model.zip
+#
+# `sim_origin_in_world` is [tx, ty, yaw_rad] — the pose of the
+# simulation arena origin (gap center, (0, 0) in sim) expressed in
+# `parent_frame`. The lab map frame is right-handed z-up, with origin
+# at the top-right corner of the sim arena (sim (+1.0, +1.25)),
+# x_lab pointing along -y_sim, y_lab pointing along +x_sim. So:
+#   tx  = +1.25  (sim origin is at lab x = (0 - 1.25) · (-1) = 1.25)
+#   ty  = -1.00  (sim origin is at lab y = (0 - 1.0)  · ( 1) = -1.0)
+#   yaw = +π/2   (sim's +x axis expressed in lab is (0, 1))
+
+model_path: ""
+role: follower                        # "cleaner" or "follower"
+
+# TF frames.
+parent_frame: map
+cleaner_frame: robomaster_1
+follower_frame: robomaster_2
+table_frame: obstacle_1
+# Empty → latch the dirt to the table's pose at node startup.
+dirt_frame: ""
+
+# Control loop.
+cmd_topic: "/reference_state"
+rate_hz: 10.0                          # matches sim dt = 0.1
+
+# Sim-frame embedding inside the lab. ``yaw`` is given in
+# ``parent_frame``'s own convention (CCW-positive when z-up).
+sim_origin_in_world: [1.25, -1.0, 1.5707963267948966]
+
+# Chirality of the parent frame. True for z-down (e.g. NED) — the node
+# negates yaw at the TF/publish boundary so the sim's CCW-positive
+# convention is preserved internally. Our lab map frame is z-up
+# right-handed (REP-105 / ROS standard), so this stays false.
+parent_z_down: false
+
+# Kinematic clamps (mirror the sim).
+max_speed: 0.5                         # m/s
+max_yaw_rate: 3.141592653589793        # π rad/s
+clamp_action: true
+
+# TF lookup deadline.
+tf_timeout_sec: 0.2
+
+# Debug modes — skip the policy, publish a hand-crafted setpoint.
+goto_origin: false
+goto_dirt: false

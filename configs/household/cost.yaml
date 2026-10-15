@@ -1,0 +1,16 @@
+# household cost overrides (on top of common/cost.yaml).
+#
+# alpha: V_F weight in the joint utility cost
+#   utility = r_leader_norm + alpha * trust * r_follower_norm
+# Unified to 4.0 across all scenarios (the value used in every reported
+# evaluation); per-scenario alpha sensitivity is a separate study.
+alpha: 4.0
+# Skip the [0, 1] clamp on return normalization so plans that beat the
+# calibration ceiling are rewarded proportionally (and crashing plans go
+# below 0). See evaluations / cost.py for the rationale.
+clip_normalized: false
+# Calibrate the leader/follower normalization range against ALL naive
+# episodes (not just successful ones); 200 episodes for run-to-run band
+# stability when the success rate is ~50%.
+calibrate_on_success_only: false
+calibration_episodes: 200

@@ -1,0 +1,47 @@
+# Cleaner (leader) env config for the household scenario — real-metric.
+#
+# Arena: 2.0 m × 2.5 m. Wall: 0.1 m thick strip at y=0 with a 0.36 m
+# gap at x=0; modelled as two static SAT rectangles. Robots are
+# 0.33 × 0.24 m with heading along the long side (hx = 0.165, hy = 0.12).
+# Obstacle is a 0.43 m × 0.43 m square.
+
+dt: 0.1
+max_steps: 200
+
+# Per-axis world bounds.
+world_x_min: -1.0
+world_x_max: 1.0
+world_y_min: -1.25
+world_y_max: 1.25
+
+# Dynamics (real-metric).
+max_speed: 0.5             # m/s
+max_yaw_rate: 3.141592653589793  # π rad/s
+
+# Rectangle half-extents (hx = heading half-length, hy = lateral).
+cleaner_half_extents: [0.165, 0.12]
+follower_half_extents: [0.165, 0.12]
+table_half_extents: [0.31, 0.24]     # 0.62 × 0.48 m (short side doubled in length)
+
+# Push response (quasi-static table; lever-arm torque from SAT contact).
+push_strength_lin: 1.0
+push_strength_rot: 1.0
+
+# Wall (two static SAT rectangles).
+wall_enabled: true
+# wall_y shifted up from 0.0 to 0.25 so the lower half is 1.5 m tall
+# (vs 1.25 m before); gives the cleaner ~0.49 m of approach room
+# below an axis-aligned table at the new gap-center.
+wall_y: 0.25
+wall_thickness: 0.1
+gap_x: 0.0
+gap_width: 0.36
+
+# Reward shape: progress_weight tripled to compensate for the 3× weaker
+# per-step shaping (max_speed × dt = 0.05 m/step here vs 0.15 in the old
+# normalized sim).
+step_penalty: 0.01
+progress_weight: 3.0
+wall_collision_penalty: 0.1
+pickup_reward: 25.0
+goal_reward: 25.0

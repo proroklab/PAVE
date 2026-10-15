@@ -1,0 +1,45 @@
+# Navigator (follower) env config for the household scenario — real-metric.
+#
+# Same world geometry as clean_env.yaml. Goal is the lower boundary
+# (y = world_y_min). Table is static-per-episode during training.
+
+dt: 0.1
+max_steps: 250
+
+world_x_min: -1.0
+world_x_max: 1.0
+world_y_min: -1.25
+world_y_max: 1.25
+
+max_speed: 0.5
+max_yaw_rate: 3.141592653589793
+
+cleaner_half_extents: [0.165, 0.12]
+follower_half_extents: [0.165, 0.12]
+table_half_extents: [0.31, 0.24]     # 0.62 × 0.48 m (short side doubled in length)
+
+push_strength_lin: 1.0
+push_strength_rot: 1.0
+
+wall_enabled: true
+# wall_y shifted up from 0.0 to 0.25 so the lower half is 1.5 m tall.
+wall_y: 0.25
+wall_thickness: 0.1
+gap_x: 0.0
+gap_width: 0.36
+
+# Reward shape mirrors obstacle_arena nav:
+# progress × (Δdist) − distance × dist − distance × gap_penalty
+# + goal_reward on success, − collision_penalty on SAT-overlap with
+# table OR wall.
+step_penalty: 0.0
+progress_weight: 3.0
+distance_weight: 0.1
+# Static fallback: 10.0 matches the schedule's plateau value. During
+# training a CollisionPenaltyScheduleCallback overrides this each
+# rollout (linear 0 → 10 ramp). At eval time / deployment the env
+# uses this value directly.
+collision_penalty: 10.0
+pickup_reward: 0.0
+goal_reward: 25.0
+wall_collision_penalty: 0.0

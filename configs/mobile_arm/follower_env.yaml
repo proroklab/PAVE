@@ -1,0 +1,53 @@
+# Follower env config for the mobile_arm scenario.
+world_min: -5.0
+world_max: 5.0
+dt: 0.1
+max_steps: 200
+
+# Base + arm. 4-DOF planar; sign convention: positive joints = bend
+# forward/down. Cumulative angles compound subtractively
+# (φ_L2a = θ_2 − θ_3; φ_L2b = θ_2 − θ_3 − θ_4).
+base_size: 0.6
+base_height: 0.4
+L1: 0.5
+L2a: 0.6
+L2b: 0.6
+theta1_low: -1
+theta1_high: 1 
+theta2_low: 0.0
+theta2_high: 1.5707963267948966
+theta3_low: 0.0
+theta3_high: 3.141592653589793
+theta4_low: 0.0
+theta4_high: 3.141592653589793
+theta1_default: 0.0                     # base facing right
+theta2_default: 1.5707963267948966     # π/2 — upper arm vertical
+theta3_default: 0.7853981633974483     # π/4 — elbow bent forward 45°
+theta4_default: 0.7853981633974483     # π/4 — wrist bent forward 45°
+
+# Tray (in base frame, z above chassis top)
+tray_offset_x: 0.25
+tray_offset_y: 0.0
+tray_offset_z: 0.05
+
+# Object
+object_radius: 0.05
+object_r_min: 0.4   # avoids spawning inside the base footprint (half-side=0.3)
+object_r_max: 2.4   # extends past arm reach (1.7) so V learns unreachable cases
+
+# Pickup / drop
+eps_pickup: 0.10
+eps_tray: 0.10
+
+# Follower dynamics + reward
+max_joint_rate: 3.141592653589793
+step_penalty: 0.01
+progress_weight: 1.0
+pickup_reward: 1.0
+goal_reward: 25.0
+
+# Per-step penalty when an attempted joint update would put a joint
+# endpoint inside the floor or the base box. The update is hard-reverted
+# (arm stays at previous joints for that step) and this penalty is added
+# to the step reward so the policy actively avoids approach trajectories.
+collision_penalty: 0

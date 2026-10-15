@@ -1,0 +1,8 @@
+# Common cost module defaults (shared across all scenarios).
+# Scenario-specific cost.yaml files override these values.
+#
+# alpha: V_F weight in the joint utility cost
+#   utility = r_leader_norm + alpha * trust * r_follower_norm
+# Unified to 4.0 — the value used in every reported evaluation. Per-scenario
+# alpha sensitivity is a separate study.
+alpha: 4.0

@@ -1,0 +1,11 @@
+# Common training defaults (shared across all scenarios).
+# Scenario-specific YAMLs override these values.
+total_timesteps: 200000
+learning_rate: 0.0003
+gamma: 0.99
+n_steps: 256
+batch_size: 64
+n_envs: 4
+seed: 42
+checkpoint_freq: 10000
+device: cuda 

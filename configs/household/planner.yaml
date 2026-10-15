@@ -1,0 +1,10 @@
+# CEM planner for household. Smaller budget than obstacle_arena's
+# Optuna-tuned defaults because household has a heavier per-step
+# dynamics cost (SAT push + lever-arm torque) and shorter episodes.
+horizon: 20
+num_samples: 100
+num_iters: 5
+noise_sigma: 0.5
+elite_frac: 0.3
+min_std: 0.2
+replan_interval: 5

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Leave It Better Than Found - Mario Gomez Andreu, Michael Amir, Antonio Marino, Tianxu An, Marco Hutter, Amanda Prorok">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
+  <meta name="author" content="Mario Gomez Andreu, Michael Amir, Antonio Marino, Tianxu An, Marco Hutter, Amanda Prorok">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="Leave It Better Than Found">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Leave It Better Than Found - Research Preview">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Mario Gomez Andreu">
+  <meta property="article:author" content="Michael Amir">
+  <meta property="article:author" content="Antonio Marino">
+  <meta property="article:author" content="Tianxu An">
+  <meta property="article:author" content="Marco Hutter">
+  <meta property="article:author" content="Amanda Prorok">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- TODO: Replace with your lab/institution Twitter handle -->
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <!-- TODO: Replace with first author's Twitter handle -->
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <!-- TODO: Same as paper title above -->
+  <meta name="twitter:title" content="Leave It Better Than Found">
+  <!-- TODO: Same as description above -->
+  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
+  <!-- TODO: Same as social preview image above -->
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Leave It Better Than Found - Research Preview">
+
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks">
+  <meta name="citation_author" content="Mario Gomez Andreu">
+  <meta name="citation_author" content="Michael Amir">
+  <meta name="citation_author" content="Antonio Marino">
+  <meta name="citation_author" content="Tianxu An">
+  <meta name="citation_author" content="Marco Hutter">
+  <meta name="citation_author" content="Amanda Prorok">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="CoRL 2026">
+  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
+  
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <title>Leave It Better Than Found - Gomez Andreu et al. | CoRL 2026 Spotlight</title>
+  
+  <!-- Favicon explicitly disabled (blank data URI to suppress default request) -->
+  <link rel="icon" href="data:,">
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+  <!-- Structured Data for Academic Papers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks",
+    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "author": [
+      {"@type": "Person", "name": "Mario Gomez Andreu", "affiliation": {"@type": "Organization", "name": "ETH Zürich"}},
+      {"@type": "Person", "name": "Michael Amir", "affiliation": {"@type": "Organization", "name": "University of Cambridge"}},
+      {"@type": "Person", "name": "Antonio Marino", "affiliation": {"@type": "Organization", "name": "University of Cambridge"}},
+      {"@type": "Person", "name": "Tianxu An", "affiliation": {"@type": "Organization", "name": "ETH Zürich"}},
+      {"@type": "Person", "name": "Marco Hutter", "affiliation": {"@type": "Organization", "name": "ETH Zürich"}},
+      {"@type": "Person", "name": "Amanda Prorok", "affiliation": {"@type": "Organization", "name": "University of Cambridge"}}
+    ],
+    "datePublished": "2026",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CoRL 2026"
+    },
+    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "@inproceedings{gomezandreu2026leave,\n  title     = {Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks},\n  author    = {Gomez Andreu, Mario and Amir, Michael and Marino, Antonio and An, Tianxu and Hutter, Marco and Prorok, Amanda},\n  booktitle = {Conference on Robot Learning (CoRL)},\n  year      = {2026},\n  note      = {Spotlight}\n}",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Website/Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "",
+    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
+    "sameAs": [
+      "https://twitter.com/YOUR_TWITTER_HANDLE",
+      "https://github.com/YOUR_GITHUB_USERNAME"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- TODO: Replace with your paper title -->
+            <h1 class="title is-1 publication-title">Leave It Better Than Found</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Mario Gomez Andreu<sup>1,2</sup>,</span>
+              <span class="author-block">Michael Amir<sup>1</sup>,</span>
+              <span class="author-block">Antonio Marino<sup>1</sup>,</span>
+              <span class="author-block">Tianxu An<sup>2</sup>,</span>
+              <span class="author-block">Marco Hutter<sup>2</sup>,</span>
+              <span class="author-block">Amanda Prorok<sup>1</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>University of Cambridge</span>
+              <span class="author-block"><sup>2</sup>ETH Z&uuml;rich</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="publication-venue">CoRL 2026</span>
+              <span class="publication-awards">Spotlight</span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="static/pdfs/PAVE.pdf" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fas fa-file-pdf"></i>
+                          </span>
+                          <span>Paper</span>
+                        </a>
+                      </span>
+
+                      <!-- TODO: Replace with the actual GitHub repo URL -->
+                      <span class="link-block">
+                        <a href="https://github.com/proroklab/PAVE" target="_blank"
+                          class="external-link button is-normal is-rounded is-dark">
+                          <span class="icon">
+                            <i class="fab fa-github"></i>
+                          </span>
+                          <span>Code</span>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser image -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- TODO: Replace with your teaser image -->
+      <img src="static/images/hero.png" alt="Teaser image placeholder" style="width:100%; height:auto;" />
+      <!-- TODO: Replace with your image caption -->
+      <h2 class="subtitle has-text-centered">
+        Two agents perform tasks sequentially in a shared environment: a leader pushes the table aside to clean beneath it; a follower must then traverse the room. <b>Naive </b> (top)the leader is unaware of the follower's needs and leaves the table blocking the path, preventing traversal. <b>PAVE (Ours)</b>(bottom): the follower shares its value function over environment states, and the leader adapts by placing the table in a high-value region (overlaid with heatmap) for the follower, clearing the path, and enabling traversal.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <!-- TODO: Replace with your paper abstract -->
+          <p>
+            We consider the problem of sequential task continuation, where one robot acts in a workspace that has been affected by a previous robot.  Current approaches in multi-robot cooperation rely heavily on co-training or co-optimization, assuming that the robots have access to collective interaction data during the policy training or planning process. However, as increasingly varied robotic embodiments and policies are deployed and operate in the same real-world environment, learning policies for cooperation becomes infeasible due to the combinatorial explosion of possible robot combinations that need to be accounted for. To address this challenge, this paper considers the problem of ad hoc sequential cooperation between robots that have never before operated together in a shared environment, and proposes PAVE (Policy Adaptation via Value Exchange) as a solution. We demonstrate that robots can explicitly communicate their environmental preferences through sharing their value functions, enabling coordination without the need for prior joint training. To ground this exchange and prevent overconfidence in out-of-distribution states, we further introduce a k-nearest neighbors (KNN)-based uncertainty filter. Our method yields an increase of up to 47.7% in task success rates across simulated and real-world experiments compared with purely selfish agents, demonstrating that value function transmission between agents is useful as a basis for ad hoc coordination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Experiments</h2>
+      <style>
+        #results-carousel .item {
+          display: flex;
+          flex-direction: column;
+          height: 600px;
+          box-sizing: border-box;
+        }
+        #results-carousel .video-stack {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          min-height: 0;
+          gap: 4px;
+        }
+        #results-carousel .video-stack video {
+          flex: 1;
+          min-width: 0;
+          height: 100%;
+          object-fit: contain;
+          background: #000;
+        }
+        #results-carousel .item > video {
+          flex: 1;
+          min-height: 0;
+          width: 100%;
+          object-fit: contain;
+          background: #000;
+        }
+        #results-carousel .item .subtitle {
+          flex-shrink: 0;
+          margin: 0.5rem auto 0;
+          max-width: 60ch;
+        }
+        #results-carousel .video-labels {
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: row;
+          gap: 4px;
+          margin-bottom: 0.25rem;
+        }
+        #results-carousel .video-labels > span {
+          flex: 1;
+          text-align: center;
+          font-weight: 600;
+          font-size: 1rem;
+        }
+      </style>
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <!-- Slide 3: paired videos (ep003) -->
+        <div class="item">
+          <div class="video-labels">
+            <span>Naive</span>
+            <span>PAVE (Ours)</span>
+          </div>
+          <div class="video-stack">
+            <video poster="" controls muted loop preload="metadata">
+              <source src="static/videos/naive.mp4" type="video/mp4">
+            </video>
+            <video poster="" controls muted loop preload="metadata">
+              <source src="static/videos/ours.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            The first agent pushes the table aside to clean beneath it; a follower must then traverse the room. <b>Naive </b> (left) the leader is unaware of the follower's needs and leaves the table blocking the path, preventing traversal. 
+            <b>PAVE</b>(right): the follower shares its value function over environment states, and the leader adapts by moving the out of the way for the follower, clearing the path, and enabling traversal.
+          </h2>
+        </div>
+
+        <!-- Slide 1: paired videos (ep008) -->
+        <div class="item">
+          <div class="video-labels">
+            <span>Naive</span>
+            <span>PAVE (Ours)</span>
+          </div>
+          <div class="video-stack">
+            <video poster="" controls muted loop preload="metadata">
+              <source src="static/videos/ep008_unguided.mp4" type="video/mp4">
+            </video>
+            <video poster="" controls muted loop preload="metadata">
+              <source src="static/videos/ep008_value-and-ood.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            The first agent picks up and object and places it in one of three transfer areas. The second agent must then pick up the object and place it in the goal area. <b>Naive </b> (left): the leader is unaware of the follower's needs and places the object in a transfer area that is impossible for the follower to access, preventing task completion. 
+            <b>PAVE</b>(right): the follower shares its value function over environment states as well as its uncertainty, and the leader adapts by placing the object in a reachable transfer area that is also high-value for the follower, enabling task completion.
+          </h2>
+        </div>
+
+        <!-- Slide 2: paired videos (ep000) -->
+        <div class="item">
+          <div class="video-labels">
+            <span>Naive</span>
+            <span>PAVE (Ours)</span>
+          </div>
+          <div class="video-stack">
+            <video poster="" controls muted loop preload="metadata">
+              <source src="static/videos/ep000_unguided.mp4" type="video/mp4">
+            </video>
+            <video poster="" controls muted loop preload="metadata">
+              <source src="static/videos/ep000_value-and-ood.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            The first agents controls the movement of a mobile base, navigating to the vercinity of an object of interest. The second agents control the robotics arm mounted on the mobile base, and must pick up the object and place it in the goal area. The arms rotation is restricted, such that i can only pick up objects in front of it.
+            <b>Naive </b> (left): the leader is unaware of the follower's needs and navigates to a location, but orients the mobile base such that the follower cannot access the object, preventing task completion. 
+            <b>PAVE</b>(right): the follower shares its value function over environment states as well as its uncertainty, and the leader adapts by orienting the mobile base such that the object is within the follower's reach, enabling task completion.
+          </h2>
+        </div>
+
+
+
+        <!-- Slide 4: single video -->
+        <div class="item">
+          <video poster="" controls muted loop preload="metadata">
+            <source src="static/videos/obstacle_arena.mp4" type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            The first agent has to clear the lower half of the arena, by pushing it out of the center and into contact with any wall; a follower must then traverse the room. <b>Naive </b> (left): the leader is unaware of the follower's needs and pushes the obstacle into the gap blocking the path, preventing traversal. 
+            <b>PAVE</b>(right): the leader adapts by moving the out of the way for the follower, clearing the path, and enabling traversal.
+          </h2>
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+ <!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+   
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section> -->
+<!--End paper poster -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{gomezandreu2026leave,
+  title     = {Leave It Better Than Found: Value-Guided Cooperation in Sequential Tasks},
+  author    = {Gomez Andreu, Mario and Amir, Michael and Marino, Antonio and An, Tianxu and Hutter, Marco and Prorok, Amanda},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2026},
+  note      = {Spotlight}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

@@ -1,0 +1,15 @@
+# Pusher (leader) environment config for obstacle_arena.
+dt: 0.1
+max_speed: 1.5
+world_min: -5.0
+world_max: 5.0
+obstacle_radius: 1.5
+max_steps: 300
+goal_reward: 25.0
+agent_radius: 0.25
+push_strength: 1.0
+
+# Wall with gap
+wall_y: 0.0
+gap_x: 0.0
+gap_width: 2.0

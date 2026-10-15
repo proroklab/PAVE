@@ -1,0 +1,3 @@
+# Pusher training overrides (on top of common/training.yaml).
+total_timesteps: 400000
+n_envs: 4

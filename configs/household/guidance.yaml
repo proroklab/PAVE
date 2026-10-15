@@ -1,0 +1,11 @@
+# Guidance config for obstacle_arena (overrides common/guidance.yaml).
+distillation:
+  obstacle_samples: 200
+  agent_grid_size: 25
+  epochs: 200
+  batch_size: 64
+  lr: 0.001
+
+ood:
+  grid_size: 80
+  vae_path: null

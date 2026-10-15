@@ -1,0 +1,3 @@
+# Common path defaults.
+artifacts_root: artifacts
+save_path: null

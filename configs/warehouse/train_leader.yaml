@@ -1,0 +1,3 @@
+# Leader training overrides (on top of common/training.yaml).
+total_timesteps: 500000
+n_envs: 8
